@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+{% include 'navbar.html' %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div>
+    <div style="display: flex; justify-content: space-around; background-color: #EEEDED;">
+        <img class="image-home" src="{{ url_for('static',filename='img/profile.JPG') }}" alt="Profile Picture">
+        <div style="margin-right: 50px;">
+            <h2 style="margin-top:60px;font-family: 'Concert One', cursive;">More About Me...</h2>
+            <p class="intro">I'm a self-taught Python Developer with a background in Agronomy, more specifically Plant Biotechnology. </p>
+            <p class="intro">I was passionately studying Agronomy for 4 years and finished my internship as a Laboratory Assistant. I am still very interested in crops, plants, genetics and plant pathology.</p>
+            <p class="intro">I've 'met' Python and Programming in general out of curiosity with a simple course for beginners. It was not a love at first sight but the more I've learned the more 'attracted' and amazed by the power of Programming I've become.</p>
+            <p class="intro">Here, you can take a look at my projects, check my resume, contact me if you have any questions, or just want to share some thoughts or/and experience. Feel free to check on me on my social media accounts and say 'Hi'.  </p>
+        <div>
+            <button type="button" class="btn btn-warning btn-circle btn-contact" style="margin-bottom:50px; font-family: 'Concert One', cursive;"><a href="{{url_for('resume')}};" >Resume</a></button>
+            <button type="button" class="btn btn-danger btn-circle btn-contact" style="margin-bottom:50px; font-family: 'Concert One', cursive;"><a href="{{url_for('projects')}}">Projects</a></button>
+            <button type="button" class="btn btn-info btn-circle btn-contact" style="margin-bottom:50px; font-family: 'Concert One', cursive;"><a href="{{url_for('contact')}}">Contact</a></button>
+    </div>
+        </div>
+    </div>
+</div>
+<hr>

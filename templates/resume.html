@@ -1,0 +1,164 @@
+{% include 'header.html' %}
+{% include 'navbar.html' %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+            <div></div>
+          <img class='resume-img' src="{{ url_for('static',filename='img/profile.JPG') }}" style="width:60%; border-radius: 10%;" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+
+            <h2>Maria-Yoana Marinova</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Python Developer / Agronomist</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Gaithersburg, Maryland, US</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>miyamarinova@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>2025107305</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>Programming (Python)</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p>Pandas</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+
+          <p>Flask</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
+          </div>
+          <p>• CSS</p>
+          <p>• HTML</p>
+          <p>• MySQL and PostgreSQL</p>
+          <p>• AWS Cloud Knowledge </p>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>Bulgarian</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+
+            <p class="w3-large w3-text-theme" style="margin-top:20px;"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i></i>Courses and Certifications</b></p>
+          <p>• AWS Cloud Practitioner</p>
+          <p>• The Ultimate Pandas Bootcamp: Advanced Python Data Analysis (at Udemy, by Andy Bek)</p>
+          <p>• 100 days of code: The Complete Python Pro Bootcamp for 2023 (at Udemy, by Dr.Angela Yu)</p>
+
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+        <!-- Education Section -->
+        <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>SOFTWARE ENGINEERING, SoftUni, Sofia, Bulgaria</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 12.2022</h6>
+          <p>• Programing with Python Programming Language</p>
+            <p>• Python OOP Concepts</p>
+            <p>• Hands-on experience with Flask library</p>
+            <p>• Databases (SQL, MySQL, Pandas)</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>PLANT BIOTECHNOLOGY, Agricultural University, Plovdiv, Bulgaria</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>09.2014 - 12.2018</h6>
+          <p>BACHELOR’S DEGREE </p>
+            <p>• Erasmus exchange trainee student for 4 months at West Pomeranian University of Technology in Szczecin, Poland.</p>
+            <p>• Erasmus exchange student for 1 semester(5 months) at University of Applied Science in Prague, Czech Republic.</p>
+            <p>• Awarded with Erasmus prize for exceptional contribution to culture and social science.</p>
+            <p>• Wrote and defended a dissertation “The Influence of Blue and Red LED Lights on Hydroponically Grown Cucumbers”.</p>
+          <hr>
+        </div>
+
+      </div>
+        <!-- End Education Section -->
+
+        <!-- Work Experience -->
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>STUDENT WHILE ON MATERNITY LEAVE</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 – 2023<span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>• Multitasking between motherhood(2 little kids) and learning Python Programming Language and Concepts of Data Analysis
+            <p>• For 2 years was studying at Softuni Academy(Python Web Developer) and finished the Advanced level.</p>
+            <p>• Since the beginning of 2023 I am mainly taking Data Analysis and Cloud – Based Courses to expand my knowledges.</p>
+            <p>• Part time job as English-Bulgarian interpreter.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>QUALITY CONTROL INSPECTOR, TRENKWALDER BULGARIA</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2018 – Feb 2019</h6>
+          <p>• Approves incoming merchandise by confirming specifications; conducting visual and measurement tests; rejecting and returning unacceptable merchandise.
+            <p>• Assess and administrates roughly 6000 items per 6-hour shift.</p>
+            <p>• Approves in-process production by confirming specifications; communicating required adjustments to production supervisor.</p>
+            <p>• Prepares monthly financial reports for all local stores.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>INTERNSHIP/LAB ASSISTANT, National Research Institute Of Crop Production, Plovdiv, Bulgaria</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2018 – Oct 2018</h6>
+          <p>• Analyzed the symptoms of sample plants infected with dangerous and economically significant viruses – TMV and CMV.</p>
+<p>• Researched the resistance of different species tomatoes, peppers and tobacco.</p>
+<p>• Extracted DNA and measured it concentration from tomato breeding lines.</p>
+<p>• Quantified DNA concentration with spectrophometer and DeNovix.</p><br>
+        </div>
+          <div class="w3-container">
+          <h5 class="w3-opacity"><b>BARISTA/BARTENDER, Monkey House, Plovdiv, Bulgaria</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2017 – Oct 2018</h6>
+          <p>•Trained and recruited new staff, supervising the cafe and bar staff.</p>
+              <p>• Preparing warm and cold drinks.</p>
+              <p>• Responsible for promoting the coffee via Instagram, Facebook and at local town events.</p>
+          <hr>
+        </div>
+      </div>
+        <hr>
+
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+
+
+</body>
+</html>

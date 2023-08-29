@@ -1,0 +1,80 @@
+.image-home {
+margin-top:90px;
+    border-radius: 80%;
+    max-width: 350px;
+    max-height: 350px;
+    width:auto;
+    height:auto;
+    filter: grayscale(40%);
+
+}
+
+.projects-img{
+    max-width:400px;
+    width:auto;
+    height:200px;
+    margin-left: 50px;
+}
+
+.title-head{
+    margin-top: 100px
+    font-size: 90px;
+
+}
+
+.intro{
+    margin-left:10px;
+}
+
+.resume-img{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 45px;
+    min-width:150px;
+    min-height:150px;
+    width:250px;
+    height:250px;
+    border-radius: 70%
+
+}
+
+.project-paragraph{
+    margin-left:50px;
+    margin-right:50px;
+    margin-top:50px;
+    text-align:left;
+}
+
+.contact-paragraph{
+    margin-left: 50px;
+    margin-top:70px;
+    font-size:30px;
+ }
+
+ .btn-circle.btn-xl {
+            width: 100px;
+            height: 100px;
+            margin-left: 150px;
+            padding:  20px 10px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-color: black;
+            text-align: center;
+            text-decoration:none;
+            box-shadow:none;
+}
+
+.btn-circle.btn-contact{
+   width: 120px;
+            height: 120px;
+
+            border-radius: 60px;
+            font-size: 20px
+
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
