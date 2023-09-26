@@ -2,13 +2,41 @@ body{
     background-color: #EEEEEE;
 }
 
+/* Title Style */
+
+.p-title{
+    margin-top: 30px;
+    font-size: 25px;
+    text-align:center;
+}
+
 .title-head{
     margin-top: 100px
     font-size: 90px;
+    position: relative;
+    text-align:center;
+}
+
+.homepage-title{
+    font-size: 40px;
+    text-align:center;
+    margin-top: 5px;
+    font-family: 'Concert One', cursive;
+    margin-left: auto;
+    position:relative;
+}
+
+.project-heading{
+    margin-top:20px; margin-left: 50px; font-family: 'Concert One', cursive;
 }
 
 .intro{
-   margin-left:10px;
+   margin-left:5px;
+   position: relative;
+   margin-left: auto;
+   text-align: center;
+   position:static;
+
 }
 
 a:link, a:visited,  a:hover, a:active{
@@ -18,19 +46,31 @@ a:link, a:visited,  a:hover, a:active{
 
 p{
     font-family: 'Montserrat', sans-serif;
+
 }
 
-.image-home {
-margin-top:90px;
+.image-home{
+    justify-content:center;
+    margin-top: 10px;
     border-radius: 80%;
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 290px;
+    max-height: 290px;
     width:auto;
     height:auto;
+    text-align: center;
     filter: grayscale(40%);
+
 }
 
 .projects-img{
+    max-width:400px;
+    width:auto;
+    height:200px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.project-img{
     max-width:400px;
     width:auto;
     height:200px;
@@ -45,31 +85,6 @@ margin-top:90px;
     border-radius: 50%
     position-fixed;
     display:block;
-}
-
-.index-btn{
-    margin-bottom:50px;
-    font-family: 'Concert One', cursive;
-}
-
- .btn-circle.btn-xl {
-    width: 100px;
-    height: 100px;
-    margin-left: 150px;
-    padding:  20px 10px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-color: black;
-    text-align: center;
-    text-decoration:none;
-    box-shadow:none;
-}
-
-.btn-circle.btn-contact{
-   width: 120px;
-   height: 120px;
-   border-radius: 60px;
-   font-size: 20px
 }
 
 .project-paragraph{
@@ -91,4 +106,72 @@ footer{
     bottom: 0;
     width: 100%;
     height: 50px;
+}
+
+
+@media(max-width: 800px){
+    .image-home{
+    margin-top:90px;
+    border-radius: 80%;
+    max-width: 250px;
+    max-height: 250px;
+    width:auto;
+    height:auto;
+    filter: grayscale(40%);
+    }
+
+}
+
+.other-projects{
+margin-left: 50px;
+margin-top: 50px;
+}
+
+.hover{
+    font-size: 40px;
+}
+
+.hover-img{
+    opacity: 0.5;
+}
+
+.hover-img-zoom{
+    width:100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+/*Button Styles */
+
+#homepage-button{
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content:center;
+    text-align: center;
+}
+
+.btn-circle.btn-contact{
+   width: 120px;
+   height: 120px;
+   border-radius: 60px;
+   font-size: 20px
+}
+
+ .btn-circle.btn-xl {
+    width: 100px;
+    height: 100px;
+    margin-left: 150px;
+    padding:  20px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-color: black;
+    text-align: center;
+    text-decoration:none;
+    box-shadow:none;
+}
+
+.index-btn{
+    margin-bottom:50px;
+    font-family: 'Concert One', cursive;
 }
