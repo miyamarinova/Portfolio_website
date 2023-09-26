@@ -4,45 +4,44 @@
 
 <body style="background-color: #EEEDED">
 
-<div style="margin-bottom: 25px; margin-left:20px;"><h1 style="display: flex; and align-items: center; justify-content: center; font-family: 'Concert One', cursive;">Projects</h1></div>
+<div><h1 style="display: flex; and align-items: center; justify-content: center; font-family: 'Concert One', cursive;">Projects</h1></div>
 
 <div class="row">
 
-        <div class="col" style="width:350px;margin-left:20px;">
+        <div class="col" >
             <div class="w3-white w3-text-grey w3-card-4">
-                <h2>Online Store</h2>
-            <p>An online store for a small family farm, who sells microgreens.</p>
+                <h2 class="project-paragraph"><a href="{{url_for('project01')}}">Online Store</a></h2>
             <div><a href="{{url_for('project01')}}"><img class='projects-img' src="{{ url_for('static',filename='img/project1img1.png') }}" alt="onlinestoreimg"></a></div>
             </div></div>
 
 
 
-        <div class="col" style="width:350px">
+        <div class="col" >
             <div class="w3-white w3-text-grey w3-card-4">
-            <h2>Website for a random Cocktail pick</h2>
-            <p>Based on API for cocktails' recipies, this website will give you a random cocktail.</p>
+                <h2 class="project-paragraph"><a href="{{url_for('project_cocktail')}}">Random Cocktail</a></h2>
+
                 <div><a href="{{url_for('project_cocktail')}}"><img class='projects-img' src="{{ url_for('static',filename='img/project2img1.png') }}" alt="onlinestoreimg"></a></div>
             </div>
 
         </div>
-    <div class="col" style="width:350px;margin-left:20px;">
+    <div class="col">
             <div class="w3-white w3-text-grey w3-card-4">
-                <h2>Image Detector</h2>
-            <p>A website where the user can have a palette with most common colors from an image that a user upload.</p>
+                <h2 class="project-paragraph"><a href="{{url_for('project03')}}">Image Detector</a></h2>
             <div><a href="{{url_for('project03')}}"><img class='projects-img' src="{{ url_for('static',filename='img/project3img2.png') }}" alt="onlinestoreimg"></a></div>
             </div></div>
 </div>
 
 <div class="row">
     <div class="col">
-        <h2 style="margin-left: 20px;">Other Projects</h2>
-        <p style="margin-left:20px;margin-right:50px;text-align:left;">For more than 20 other projects, please feel free to visit my GitHub Repositories. There you can see programs like TicToe game,
-    NBA scarping website, Typing App,  To-Do List app, Breakout game, Speed Typing Test and more.
-    </p></div>
-    <div class='col' style="display: flex; and align-items: center; justify-content: center; font-family: 'Concert One', cursive;"><button type="button" class="btn btn-warning btn-circle btn-xl" style="width: 150px;
+        <h2 class="other-projects">Other Projects</h2>
+        <p class="other-projects">Please, feel free to check on my GitHub Repositories for these and many more projects, including web and desktop apps, and  simple games.</p>
+    </div>
+    <div class='col' style="display: flex; ; font-family: 'Concert One', cursive; margin-top: 50px"><button type="button" class="btn btn-warning btn-circle btn-xl" style="width: 150px;
             height: 150px;border-radius:75px"><a href="https://github.com/miyamarinova?tab=repositories">My GitHub</a></button></div>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="static/js/javas.js"></script>
 
 </body>
 
