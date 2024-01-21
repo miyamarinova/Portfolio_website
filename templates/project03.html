@@ -1,22 +1,78 @@
 {% include 'header.html' %}
-{% include 'navbar.html'%}
+{% include 'navbar.html' %}
 
 <body style="background-color: #EEEDED">
-<h1 class="project-heading">Image Decorator</h1>
-<div class="row">
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project3img1.png') }}" alt="onlinestoreimg">
+    <h1 class="project-heading text-center">Color Detector</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project3img2.png') }}" alt="randomcocktailimg1">
+        </div>
+
+        <div class="col-md-4">
+            <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project3img1.png') }}" alt="randomcocktailimg2">
+        </div>
     </div>
 
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project3img2.png') }}" alt="onlinestoreimg">
+    <div>
+       <p class="project-paragraph">
+           The Color Palette Extractor is a Flask-based web application that allows users to upload images and extract a color palette from them.
+           The application uses the ColorThief library to analyze the uploaded image and generate a color palette.
+           Users can visualize the extracted colors and obtain the corresponding hex values.
+        </p>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Key Features:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>Image Upload:</b>Users can upload images through the web interface.</li>
+    <li><b>Color Palette Extraction:</b>The ColorThief library is employed to extract a color palette from the uploaded image.</li>
+    <li><b>Visualization:</b>The extracted color palette is presented to users for visual inspection.</li>
+    <li><b>Dynamic Interaction:</b>The web application dynamically updates the color palette upon each image upload.</li>
+</ul>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Technologies Used:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>Flask:</b> The web app is built on the Flask framework, providing a lightweight and modular foundation for the project.</li>
+    <li><b>ColorThief:</b>A Python library for color extraction from images.</li>
+    <li><b>Matplotlib:</b>Utilized for plotting and visualizing the color palette.</li>
+    <li><b>Colormap:</b>Converts RGB values to hexadecimal representation for color visualization.</li>
+
+</ul>
+        <p class="project-paragraph">
+            <a href="https://github.com/miyamarinova/Daily_cocktail"><b></b>GitHub Repository to the Website</a>
+        </p>
     </div>
+    <div class="row justify-content-end">
+        <div class="col-6 text-left">
+            <h4 class="project-github-link">
+                <a href="https://github.com/miyamarinova/Dominant-Colors-In-Img/tree/main"><i class="fa-brands fa-github fa-xl footer-sym"></i>
+                    <b>GitHub Repository to the Website</b></a>
+            </h4>
+        </div>
+        <div class="col-6 text-center">
+            <button onclick="goBack()" class="btn btn-danger btn-circle back-to-button">
+                Back
+            </button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var enlargeOnHover = document.querySelectorAll('.enlarge-on-hover');
 
-</div>
+            enlargeOnHover.forEach(function (element) {
+                element.addEventListener('mouseenter', function () {
+                    this.classList.add('enlarged-img');
+                });
 
-<div>
-    <p class="project-paragraph">Via this website the user can detect the five most common colors in a image that the user upload.</p>
-    <p class="project-paragraph"><a href="https://github.com/miyamarinova/Dominant-Colors-In-Img"><b></b>GitHub Repository to the Website</b></a> </p>
-</div>
+                element.addEventListener('mouseleave', function () {
+                    this.classList.remove('enlarged-img');
+                });
+            });
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 {% include 'footer.html' %}

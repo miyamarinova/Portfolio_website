@@ -2,34 +2,91 @@
 {% include 'navbar.html'%}
 
 <body style="background-color: #EEEDED">
-<h1 class="project-heading">Online Store</h1>
-<div class="row">
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/home-page-1.png') }}" alt="onlinestoreimg">
-    </div>
+        <h1 class="project-heading text-center">Online Store</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/home-page-1.png') }}" alt="onlinestoreimg">
+            </div>
 
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project1img2.png') }}" alt="onlinestoreimg">
-    </div>
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project1img2.png') }}" alt="onlinestoreimg">
+            </div>
 
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project1img3.png') }}" alt="onlinestoreimg">
-    </div>
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project1img4.png') }}" alt="onlinestoreimg">
-    </div>
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project1img5.png') }}" alt="onlinestoreimg">
-    </div>
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project1img6.png') }}" alt="onlinestoreimg">
-    </div>
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project1img3.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project1img4.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project1img5.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project1img6.png') }}" alt="onlinestoreimg">
+            </div>
+            <p class="project-paragraph">
+            Little Green Heroes is an e-commerce platform that allows users to browse and purchase products from a small family-owned farm. The platform provides a seamless shopping experience, including features for product listing, user registration, cart management, order placement, and secure payment processing.
+        </p>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Key Features:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>User Registration and Authentication:</b> Users can register for an account with a unique username and email. Passwords are securely hashed using the bcrypt algorithm. Authentication is implemented using Flask-Login, providing a secure and user-friendly login experience.</li>
+    <li><b>Product Management:</b> Products are listed with details such as name, price, and description. Images associated with each product enhance the visual appeal of the platform.</li>
+    <li><b>Shopping Cart:</b> Users can add products to their shopping cart, specifying the quantity. Cart contents are stored in the user's session, providing a persistent and personalized shopping experience.</li>
+    <li><b>Payment Processing:</b> Integration with the Stripe API enables secure and convenient payment processing. Users can make payments using credit/debit cards.</li>
+    <li><b>User Profile:</b> Users can view and edit their profile information, including contact details and address.</li>
+</ul>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Technologies Used:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>Flask:</b> The web app is built on the Flask framework, providing a lightweight and modular foundation for the project.</li>
+    <li><b>Bootstrap:</b> Frontend Styling</li>
+    <li><b>SQLAlchemy:</b> Database</li>
+</ul>
+            <div class="row justify-content-end">
+                <div class="col-6 text-left">
+                    <h4 class="project-github-link">
+                    <a href="https://github.com/miyamarinova/MyOnlineStoreForSprouts"><i class="fa-brands fa-github fa-xl footer-sym"></i>
+                    <b>GitHub Repository to the Website</b></a>
+                </h4>
+                </div>
+            <div class="col-6 text-center"> <!-- Adjust col-6 based on your layout -->
+                <button onclick="goBack()" class="btn btn-danger btn-circle back-to-button">
+                    Back
+                </button></div>
+
+
+            </div>
+        </div>
+
 </div>
+<script>
+    // Add the following script to your HTML
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with the class 'enlarge-on-hover'
+        var enlargeOnHover = document.querySelectorAll('.enlarge-on-hover');
 
-<div>
-    <p class="project-paragraph">This is an online shop of a small family-owned farm. The user can take a look at the product list, sign in and log in/log out as a customer
-    , and add products to a personal basket. The customer can pay for the products with a debit/credit card. </p>
-    <p class="project-paragrap"><a href="https://github.com/miyamarinova/MyOnlineStoreForSprouts"><b></b>GitHub Repository to the Website</b></a> </p>
-</div>
+        // Loop through each element and add event listeners
+        enlargeOnHover.forEach(function (element) {
+            element.addEventListener('mouseenter', function () {
+                // Add the 'enlarged-img' class on hover
+                this.classList.add('enlarged-img');
+            });
+
+            element.addEventListener('mouseleave', function () {
+                // Remove the 'enlarged-img' class when the mouse leaves
+                this.classList.remove('enlarged-img');
+            });
+        });
+    });
+    function goBack() {
+  window.history.back();
+}
+</script>
 </body>
 {% include 'footer.html' %}

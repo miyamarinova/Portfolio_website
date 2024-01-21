@@ -17,7 +17,7 @@
     <div id="homepage-button">
             <button type="button" class="btn btn-warning btn-circle btn-contact"><a href="#resume" class="index-btn">Resume</a></button>
             <button type="button" class="btn btn-danger btn-circle btn-contact"><a href="#projects" class="index-btn">Projects</a></button>
-            <button type="button" class="btn btn-info btn-circle btn-contact"><a href="#contact" class="index-btn">Contact</a></button>
+            <button type="button" class="btn btn-info btn-circle btn-contact"><a href="{{url_for('contact')}}" class="index-btn">Contact</a></button>
     </div>
 
 </div>
@@ -32,7 +32,7 @@
 <!-- Projects  -->
 
 
-<div id="projects"><h1 style="display: flex; and align-items: center; justify-content: center; font-family: 'Concert One', cursive;">Projects</h1></div>
+<div id="projects"><h1 style="display: flex; align-items: center; justify-content: center; font-family: 'Concert One', cursive;">Projects</h1></div>
 
 <div class="row">
 
@@ -40,9 +40,8 @@
             <div class="w3-white w3-text-grey w3-card-4">
                 <h2 class="project-paragraph"><a href="{{url_for('project01')}}">Online Store</a></h2>
             <div><a href="{{url_for('project01')}}"><img class='projects-img' src="{{ url_for('static',filename='img/project1img1.png') }}" alt="onlinestoreimg"></a></div>
-            </div></div>
-
-
+            </div>
+        </div>
 
         <div class="col" >
             <div class="w3-white w3-text-grey w3-card-4">
@@ -50,8 +49,14 @@
 
                 <div><a href="{{url_for('project_cocktail')}}"><img class='projects-img' src="{{ url_for('static',filename='img/project2img1.png') }}" alt="onlinestoreimg"></a></div>
             </div>
-
         </div>
+
+    <div class="col">
+            <div class="w3-white w3-text-grey w3-card-4">
+                <h2 class="project-paragraph"><a href="{{url_for('project04')}}">The Chat Rooms</a></h2>
+            <div><a href="{{url_for('project03')}}"><img class='projects-img' src="{{ url_for('static',filename='img/project4img00.png') }}" alt="chatroomsimg"></a></div>
+            </div>
+    </div>
     <div class="col">
             <div class="w3-white w3-text-grey w3-card-4">
                 <h2 class="project-paragraph"><a href="{{url_for('project03')}}">Image Detector</a></h2>
@@ -216,18 +221,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <hr>
       <!-- End Right Column -->
     </div>
-
   <!-- End Grid -->
   </div>
-
   <!-- End Page Container -->
 </div>
 
-
-
 </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="static/js/javas.js"></script>
+
 </html>
 
 
@@ -236,7 +236,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="static/js/javas.js"></script>
+<script src="static/js/index.js"></script>
 
 </body>
 {% include 'footer.html' %}

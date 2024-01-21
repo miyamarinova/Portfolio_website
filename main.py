@@ -33,6 +33,10 @@ def project_cocktail():
 def project03():
     return render_template('project03.html')
 
+@app.route('/project04')
+def project04():
+    return render_template('project04.html')
+
 
 
 if __name__ == '__main__':

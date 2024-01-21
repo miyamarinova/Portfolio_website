@@ -1,0 +1,92 @@
+{% include 'header.html' %}
+{% include 'navbar.html'%}
+
+<body style="background-color: #EEEDED">
+        <h1 class="project-heading text-center">The Chat Rooms</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project4img00.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project4img0.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project4img3.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project4img4.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project4img5.png') }}" alt="onlinestoreimg">
+            </div>
+
+            <div class="col-md-4">
+                <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project4img6.png') }}" alt="onlinestoreimg">
+            </div>
+            <p class="project-paragraph">
+            Tha Chat Rooms are Flask web application that brings together real-time chat functionality, a mental health assistant powered by the ChatGBT API, and an anonymous story-sharing feature in a blog-style format.
+        </p>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Key Features:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>Real-Time Chat:</b>Experience seamless communication with real-time chat using the Socket library. Engage in conversations, connect with others, and enjoy the dynamic interaction within the application.</li>
+    <li><b>Mental Health Assistant:</b>Integrated with the ChatGBT API, the web app includes a mental health assistant designed to provide support and assistance. Users can engage in conversations, ask questions, and receive empathetic responses to enhance their mental well-being.</li>
+    <li><b>Anonymous Story Sharing:</b>Share your stories in a safe and anonymous environment. Whether it's personal experiences, thoughts, or reflections, the blog-style feature allows users to express themselves without revealing their identity.</li>
+</ul>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Technologies Used:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>Flask:</b> The web app is built on the Flask framework, providing a lightweight and modular foundation for the project.</li>
+    <li><b>Bootstrap:</b> Frontend Styling</li>
+    <li><b>SQLAlchemy:</b> Database for the shared stories.</li>
+    <li><b>Socket Library:</b> Real-time chat functionality is achieved through the integration of the Socket library, enabling instant communication between users.</li>
+    <li><b>ChatGBT API:</b> The mental health assistant leverages the ChatGBT API, offering a unique and supportive conversational experience for users seeking mental health resources.</li>
+</ul>
+            <div class="row justify-content-end">
+                <div class="col-6 text-left">
+                    <h4 class="project-github-link">
+                    <a href="https://github.com/miyamarinova/theChatRooms"><i class="fa-brands fa-github fa-xl footer-sym"></i>
+                    <b>GitHub Repository to the Website</b></a>
+                </h4>
+                </div>
+            <div class="col-6 text-center"> <!-- Adjust col-6 based on your layout -->
+                <button onclick="goBack()" class="btn btn-danger btn-circle back-to-button">
+                    Back
+                </button></div>
+
+
+            </div>
+        </div>
+
+</div>
+<script>
+    // Add the following script to your HTML
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with the class 'enlarge-on-hover'
+        var enlargeOnHover = document.querySelectorAll('.enlarge-on-hover');
+
+        // Loop through each element and add event listeners
+        enlargeOnHover.forEach(function (element) {
+            element.addEventListener('mouseenter', function () {
+                // Add the 'enlarged-img' class on hover
+                this.classList.add('enlarged-img');
+            });
+
+            element.addEventListener('mouseleave', function () {
+                // Remove the 'enlarged-img' class when the mouse leaves
+                this.classList.remove('enlarged-img');
+            });
+        });
+    });
+    function goBack() {
+  window.history.back();
+}
+</script>
+</body>
+{% include 'footer.html' %}

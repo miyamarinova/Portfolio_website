@@ -2,23 +2,76 @@
 {% include 'navbar.html' %}
 
 <body style="background-color: #EEEDED">
-<h1 class="project-heading" >Random Cocktail</h1>
-<div class="row">
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project2img1.png') }}" alt="onlinestoreimg">
+    <h1 class="project-heading text-center">Random Cocktail</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project2img1.png') }}" alt="randomcocktailimg1">
+        </div>
+
+        <div class="col-md-4">
+            <img class='project-img img-fluid enlarge-on-hover' src="{{ url_for('static',filename='img/project2img2.png') }}" alt="randomcocktailimg2">
+        </div>
     </div>
 
-    <div class="col">
-        <img class='project-img' src="{{ url_for('static',filename='img/project2img2.png') }}" alt="onlinestoreimg">
+    <div>
+       <p class="project-paragraph">
+           Random Cocktail is a delightful website designed to provide daily inspiration for cocktails. Users can easily discover what cocktail they should drink or prepare today, making it a fun and interactive platform.
+           The project fetches recipes and images for various cocktails by utilizing HTTP requests and REST APIs from a public API ([TheCocktailDB](https://www.thecocktaildb.com/api/)).
+        </p>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Key Features:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>User-Friendly Interface:</b>The website is designed to be user-friendly, making it easy for individuals or groups to decide on a cocktail choice.</li>
+    <li><b>Recipe Collection:</b> The platform collects cocktail recipes and images from TheCocktailDB API, ensuring a diverse and extensive selection of beverages.</li>
+    <li><b>API Integration:</b> Utilizes HTTP requests and interacts with TheCocktailDB API to gather real-time information about cocktails, allowing for an up-to-date and dynamic experience.</li>
+</ul>
+<p class="project-paragraph">
+    <b style="text-decoration: underline">Technologies Used:</b>
+</p>
+<ul class="paragraph-list">
+    <li><b>Flask:</b> The web app is built on the Flask framework, providing a lightweight and modular foundation for the project.</li>
+    <li><b>HTML/CSS:</b>Frontend styling to create an aesthetically pleasing and responsive user interface.</li>
+    <li><b>REST API (TheCocktailDB):</b>Integration with a public API to dynamically fetch cocktail recipes and images.</li>
+    <li><b>GitHub Repository:</b>The project is version-controlled and hosted on GitHub for collaboration and version tracking.</li>
+
+</ul>
+        <p class="project-paragraph">
+            <a href="https://github.com/miyamarinova/Daily_cocktail"><b></b>GitHub Repository to the Website</a>
+        </p>
     </div>
+    <div class="row justify-content-end">
+        <div class="col-6 text-left">
+            <h4 class="project-github-link">
+                <a href="https://github.com/miyamarinova/Daily_cocktail"><i class="fa-brands fa-github fa-xl footer-sym"></i>
+                    <b>GitHub Repository to the Website</b></a>
+            </h4>
+        </div>
+        <div class="col-6 text-center">
+            <button onclick="goBack()" class="btn btn-danger btn-circle back-to-button">
+                Back
+            </button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var enlargeOnHover = document.querySelectorAll('.enlarge-on-hover');
 
-</div>
+            enlargeOnHover.forEach(function (element) {
+                element.addEventListener('mouseenter', function () {
+                    this.classList.add('enlarged-img');
+                });
 
-<div>
-    <p class="project-paragraph">Find your daily inspiration for cocktails. Funny website that suggests what cocktail should you drink or prepare today.
-    Can be used many times, for example for a couple of friends who are wondering what to order. The recipes and the images for all the cocktails are collect by using HTTP request and REST APIs from a public API (<a href="https://www.thecocktaildb.com/api/">'https://www.thecocktaildb.com/api/'</a>).</p>
-    <p class="project-paragraph"><a href="https://github.com/miyamarinova/Daily_cocktail"><b></b>GitHub Repository to the Website</b></a> </p>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="static/js/javas.js"></script>
+                element.addEventListener('mouseleave', function () {
+                    this.classList.remove('enlarged-img');
+                });
+            });
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
+{% include 'footer.html' %}
+
